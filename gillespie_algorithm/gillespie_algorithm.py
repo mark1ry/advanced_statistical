@@ -44,7 +44,7 @@ def plotFigure (gillespieEnsamble, lotkaVolterraEnsamble, *args):
     plt.ylim(0, 1.1*max(max(preyLotkaVolterra),max(hawksLotkaVolterra)))
 
     plt.tight_layout()
-    plt.savefig(f"output_example/trial_figure_r{args[0]}_b{args[1]}_d{args[2]}.png")
+    plt.savefig(f"output_example/figure_r{args[0]}_b{args[1]}_d{args[2]}.png")
     plt.show()
    
 def plotAx(ax, time, hawks, prey, ensambleSize, *args):
