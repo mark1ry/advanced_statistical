@@ -26,7 +26,7 @@ def calculateEnsambleMean(ensamble, ensambleSize):
 def plotFigure (gillespieEnsamble, lotkaVolterraEnsamble, *args):
     plt.figure(figsize=(12, 18))
     index = 1
-    for size in [1, 10, 50, 100, 250]:
+    for size in [1, 10, 50, 100, 500]:
         ax = plt.subplot(3, 2, index)
         timeGillespie, hawksGillespie, preyGillespie = calculateEnsambleMean(gillespieEnsamble[:size], size)
         plotAx(ax, timeGillespie, hawksGillespie, preyGillespie, size, args[0], args[1], args[2])
@@ -63,11 +63,11 @@ def plotAx(ax, time, hawks, prey, ensambleSize, *args):
 
  
 def main ():
-    ensambleSize = 100
+    ensambleSize = 500
     
-    preyBirthRate = 1
-    predationRate = 0.02
-    hawkDeathRate = 0.5
+    preyBirthRate = 0.1
+    predationRate = 0.002
+    hawkDeathRate = 0.1
     
     initialHawkPopoulation = 20
     initialPreyPopulation = 50
