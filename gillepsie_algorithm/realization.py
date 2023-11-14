@@ -31,7 +31,7 @@ class Realization:
             totalRate = preyBirthRate + hawkHuntingRate + hawkDeathRate
             
             if totalRate <= 0:
-                timeUntilNextEvent = 0.2
+                timeUntilNextEvent = 0.02
             else:  
                 # Calculate time until the next event
                 timeUntilNextEvent = -np.log(np.random.rand()) / totalRate
