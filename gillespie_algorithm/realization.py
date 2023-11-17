@@ -75,11 +75,11 @@ class Realization:
         steps in time.
 
     """
-    def convertToRegularSteps(self, stepsize):
+    def convertToRegularSteps(self, maximumTime, stepsize):
 
         regularHawksNumber = []
         regularPreyNumber = []
-        regularTime = [time/10 for time in range(301)]
+        regularTime = [time*stepsize for time in range(round(maximumTime/stepsize) + 1)]
         
         for currentTimeStep in regularTime:
             if currentTimeStep == 0:
